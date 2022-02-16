@@ -35,7 +35,7 @@ class State:
 
     @classmethod
     def from_file(cls, path: str):
-        with open(path, 'r') as f:
+        with open(path, 'r',  encoding='utf-8') as f:
             lines = f.readlines()
             words = map(lambda x: zip(*x), map(str.split, lines))
             parsed_words = []

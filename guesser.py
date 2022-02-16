@@ -7,7 +7,7 @@ from state import State
 
 class Guesser:
     def __init__(self,  path_to_words: str):
-        with open(path_to_words, 'r') as f:
+        with open(path_to_words, 'r',  encoding='utf-8') as f:
             self.words_from_path = list(map(str.strip, f.read().split()))
         self.letters_freq = collections.Counter(''.join(self.words_from_path))
 
